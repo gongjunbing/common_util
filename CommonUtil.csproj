@@ -1,0 +1,60 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup Label="Globals">
+        <SccProjectName>SAK</SccProjectName>
+        <SccProvider>SAK</SccProvider>
+        <SccAuxPath>SAK</SccAuxPath>
+        <SccLocalPath>SAK</SccLocalPath>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <Version>1.0.30</Version>
+        <PackageId>DuoMai.CommonUtil</PackageId>
+        <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>DuoMai</Authors>
+        <Company>DuoMai</Company>
+        <Product>DuoMai</Product>
+        <Copyright>DuoMai</Copyright>
+        <Description>DuoMai公共工具类，包含配置文件取值、数据库操作封装、加解密工具类、Excel工具类、Web操作工具类、Json序列化工具类、日志工具类、MQ工具类</Description>
+        <AssemblyVersion>1.0.0.30</AssemblyVersion>
+        <FileVersion>1.0.0.30</FileVersion>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+        <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+        <WarningsAsErrors />
+        <DocumentationFile>CommonUtil.xml</DocumentationFile>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+      <TreatWarningsAsErrors>true</TreatWarningsAsErrors>
+      <WarningsAsErrors />
+      <DocumentationFile>E:\DuoMaiCommonCode\DuoMai_Common\Code\Duomai_Common\CommonUtil\CommonUtil.xml</DocumentationFile>
+      <DefineConstants>DEBUG;TRACE</DefineConstants>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Compile Remove="JSON\CustomerSearchRequest.cs" />
+      <Compile Remove="JSON\JsonToSql.cs" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="CommonUtil.xml" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Hosting" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="2.2.0" />
+        <PackageReference Include="NLog" Version="4.6.3" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="2.2.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="2.2.0" />
+        <PackageReference Include="NPOI" Version="2.4.1" />
+        <PackageReference Include="RabbitMQ.Client" Version="5.1.0" />
+        <PackageReference Include="Snowflake.Core" Version="2.0.0" />
+        <PackageReference Include="sqlSugarCore" Version="5.0.0.8" />
+        <PackageReference Include="Steeltoe.Discovery.ClientCore" Version="2.2.0" />
+    </ItemGroup>
+
+</Project>
